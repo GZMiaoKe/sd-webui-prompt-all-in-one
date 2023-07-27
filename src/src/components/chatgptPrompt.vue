@@ -5,35 +5,6 @@
                 <icon-svg name="close"/>
             </div>
             <div class="chatgpt-body" @click.stop>
-                <div :class="['body-panel', hidePanels['api'] ? 'fold': '']">
-                    <div class="panel-header">
-                        <div class="panel-unfold" @click="onUnfoldClick('api')">
-                            <icon-svg class="hover-scale-120" name="unfold"/>
-                        </div>
-                        <div class="panel-title">{{ getLang('api_config') }}</div>
-                    </div>
-                    <div class="panel-content">
-                        <div class="body-line" v-for="config in configs">
-                            <div class="line-title">{{ config.title }}</div>
-                            <div class="line-content">
-                                <input type="text" v-if="config.type == 'input'" v-model="config.value">
-                                <select v-if="config.type == 'select'" v-model="config.value">
-                                    <option v-for="option in config.options" :value="option">{{ option }}</option>
-                                </select>
-                                <div v-if="config.desc" v-html="config.desc"></div>
-                            </div>
-                        </div>
-                        <div class="body-line">
-                            <div class="line-title"></div>
-                            <div class="line-content text-right">
-                                <div class="common-btn hover-scale-120" @click="onSaveConfigClick">
-                                    <icon-svg v-if="saveConfigIng" name="loading"/>
-                                    <template v-else>{{ getLang('save') }}</template>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div :class="['body-panel', hidePanels['send'] ? 'fold': '']">
                     <div class="panel-header">
                         <div class="panel-unfold" @click="onUnfoldClick('send')">
