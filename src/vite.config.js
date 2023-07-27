@@ -19,9 +19,7 @@ export default defineConfig({
     // assetsDir: '../',
     minify: true,
     sourcemap: true,
-    watch: {
-      // https://rollupjs.org/configuration-options/#watch
-    },
+    watch: false,
     lib: {
       entry: resolve(__dirname, 'src/main.js'),
       name: 'sd-webui-prompt-all-in-one',
