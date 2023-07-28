@@ -44,12 +44,6 @@
                             @click:switch-theme="onSwitchTheme"
             ></physton-prompt>
         </template>
-        <translate-setting ref="translateSetting" v-model:language-code="languageCode"
-                           :translate-apis="translateApis" :languages="languages"
-                           @forceUpdate:translateApi="updateTranslateApiConfig"
-                           v-model:tag-complete-file="tagCompleteFile"
-                           v-model:only-csv-on-auto="onlyCsvOnAuto"
-                           v-model:translate-api="translateApi"></translate-setting>
         <select-language ref="selectLanguage" v-model:language-code="languageCode"
                          :translate-apis="translateApis"
                          :languages="languages"
