@@ -28,8 +28,9 @@ jobs:
         cd src
         npm run build
 
-    - name: Archive Production Artifact
-      uses: actions/upload-artifact@v3
+    - name: Commit and Push
+      uses: EndBug/add-and-commit@v9
       with:
-        name: production-build
-        path: javascript/
+        default_author: github_actions
+        message: 'build by commit ${GITHUB_SHA}'
+        add: 'javascript/*'
