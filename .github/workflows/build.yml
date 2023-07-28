@@ -31,7 +31,7 @@ jobs:
     - name: Set short SHA
       id: vars
       run: |
-        echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+        echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
     - name: Commit and Push
       uses: EndBug/add-and-commit@v9
